@@ -3,7 +3,6 @@ package com.sample.messages.service
 import com.sample.messages.model.Message
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.channels.actor
 import org.springframework.stereotype.Service
@@ -13,7 +12,6 @@ interface ReadMessageService {
 }
 
 @Service
-@ObsoleteCoroutinesApi
 class ReadMessageActorService(private val containerService: MessageContainerService) : ReadMessageService {
     private val messageActorRead: SendChannel<ReadCounterMessage> = GlobalScope.actor {
         for (msg in channel) {

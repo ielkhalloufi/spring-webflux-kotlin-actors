@@ -7,7 +7,7 @@ import java.time.ZoneId
 @Service
 class TimeService {
 
-    val ZONE_ID: ZoneId = ZoneId.of("Europe/Amsterdam")
+    private val ZONE_ID: ZoneId = ZoneId.of("Europe/Amsterdam")
 
     fun nowDateTime(): LocalDateTime {
         return LocalDateTime.now(ZONE_ID)

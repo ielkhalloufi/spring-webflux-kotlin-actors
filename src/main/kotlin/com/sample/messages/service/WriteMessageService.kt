@@ -2,7 +2,6 @@ package com.sample.messages.service
 
 import com.sample.messages.model.Message
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.newSingleThreadContext
@@ -13,7 +12,6 @@ interface WriteMessageService {
 }
 
 @Service
-@ObsoleteCoroutinesApi
 class WriteMessageActorService(private val containerService: MessageContainerService)
     : WriteMessageService {
 

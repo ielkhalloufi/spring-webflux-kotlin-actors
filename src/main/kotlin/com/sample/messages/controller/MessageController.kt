@@ -5,8 +5,6 @@ import com.sample.messages.model.Message
 import com.sample.messages.model.MessageView
 import com.sample.messages.service.*
 import kotlinx.coroutines.CompletableDeferred
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -19,8 +17,6 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.core.publisher.Mono
 
-@ObsoleteCoroutinesApi
-@FlowPreview
 @RestController
 class MessageController(
         private val readMessageService: ReadMessageService,

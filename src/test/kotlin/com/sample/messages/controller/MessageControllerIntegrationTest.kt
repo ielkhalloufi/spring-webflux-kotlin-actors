@@ -82,7 +82,7 @@ class MessageControllerIntegrationTest {
         webTestClient
                 .post().uri("/messages")
                 .contentType(MediaType.APPLICATION_JSON)
-                .syncBody(messageContent)
+                .bodyValue(messageContent)
                 .exchange()
                 .expectStatus().isOk
     }
